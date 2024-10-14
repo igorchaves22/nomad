@@ -1,0 +1,82 @@
+@import "~styles/theme.scss";
+
+.footer {
+    width: 100%;
+    height: min-content;
+    padding: $spacing-sm $spacing-md $spacing-giga;
+    display: grid;
+    grid: min-content / min(100%, $max-content-width);
+    justify-content: center;
+    background-color: $color-main;
+    box-shadow: 0 0.25rem 1rem 0 $color-shadow-black;
+
+    &__ {
+        &container {
+            width: 100%;
+            height: min-content;
+            display: grid;
+            grid: repeat(2, min-content) / 100%;
+            gap: $spacing-lg $spacing-xxl;
+            align-items: center;
+        }
+
+        &box {
+            width: 100%;
+            height: min-content;
+            gap: $spacing-lg $spacing-xxl;
+
+            &-- {
+                &logo {
+                    display: grid;
+                    grid: repeat(2, min-content) / 100%;
+                }
+
+                &list {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+            }
+        }
+
+        &item {
+            width: max-content;
+            height: min-content;
+        }
+
+        &link {
+            width: 100%;
+            height: min-content;
+            color: $color-primary;
+            font: $font-xs;
+            text-decoration: none;
+        }
+
+        &text {
+            width: 100%;
+            height: min-content;
+            color: $color-primary;
+            font: $font-md;
+        }
+    }
+
+    @media (width >= $breakpoint-md) {
+        &__ {
+            &container {
+                grid: min-content / 0.5fr 1fr;
+            }
+
+            &box {
+                &-- {
+                    &logo {
+                        display: grid;
+                        grid: repeat(2, min-content) / 100%;
+                    }
+    
+                    &list {
+                        justify-content: space-evenly;
+                    }
+                }
+            }
+        }
+    }
+}

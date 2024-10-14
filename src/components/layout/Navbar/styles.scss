@@ -1,0 +1,46 @@
+@import "~styles/theme.scss";
+@import "~styles/animation.scss";
+
+.navbar {
+    width: 100%;
+    height: min-content;
+
+    &__ {
+        &container {
+            width: 100%;
+            height: min-content;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: $spacing-xs $spacing-md;
+            justify-content: center;
+            align-items: end;
+        }
+
+        &item {
+            width: max-content;
+            height: min-content;
+        }
+
+        &link {
+            width: max-content;
+            height: min-content;
+            color: $color-primary;
+            font: $font-lg;
+            text-decoration: none;
+            transition: color $time-primary ease-in-out;
+
+            &:hover {
+                color: $color-brand;
+            }
+        }
+    }
+
+    @media (width >= $breakpoint-lg) {
+        &__ {
+            &container {
+                flex-direction: row;
+            }
+        }
+    }
+}

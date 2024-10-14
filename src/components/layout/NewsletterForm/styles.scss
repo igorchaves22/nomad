@@ -1,0 +1,59 @@
+@import "~styles/theme.scss";
+
+.newsletter-form {
+    width: min(100%, 44rem);
+    height: min-content;
+    padding: $spacing-sm $spacing-lg;
+    border-radius: $border-radius-primary;
+    position: relative;
+    display: grid;
+    grid: min-content / max-content 1fr max-content;
+    column-gap: $spacing-md;
+    align-items: center;
+    background-color: $color-secondary;
+    box-shadow: 0 0.125rem 0.25rem $color-shadow-black;
+
+    &__ {
+        &label {
+            width: max-content;
+            height: min-content;
+        }
+
+        &icon {
+            display: block;
+            color: $color-primary;
+            font-size: $icon-size;
+        }
+
+        &input {
+            width: 100%;
+            height: min-content;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            color: $color-primary;
+            font: $font-sm;
+        }
+
+        &button {
+            width: max-content;
+            height: min-content;
+            padding: $spacing-sm $spacing-lg;
+            border: none;
+            border-radius: $border-radius-primary;
+            background-color: $color-brand;
+            color: $color-main;
+            font: $font-xs;
+            cursor: pointer;
+        }
+
+        &error-message {
+            position: absolute;
+            z-index: 2;
+            inset: calc(100% + $spacing-sm) 0 0 0;
+            color: $color-brand;
+            font: $font-xs;
+            text-align: center;
+        }
+    }
+}

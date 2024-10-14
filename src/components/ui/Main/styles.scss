@@ -1,0 +1,8 @@
+@import "~styles/theme.scss";
+
+.main {
+    width: 100%;
+    height: min-content;
+    min-height: 100vh;
+    background: url("~assets/page-background.png") center / 150% repeat $color-main;
+}

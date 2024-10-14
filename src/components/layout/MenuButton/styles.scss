@@ -1,0 +1,17 @@
+@import "~styles/theme.scss";
+
+.menu-button {
+    width: max-content;
+    height: min-content;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &__ {
+        &icon {
+            display: block;
+            color: $color-brand;
+            font-size: $icon-size;
+        }
+    }
+}

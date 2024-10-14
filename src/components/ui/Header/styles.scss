@@ -1,0 +1,49 @@
+@import "~styles/theme.scss";
+
+.header {
+    width: 100%;
+    height: min-content;
+    padding: $spacing-md;
+    position: absolute;
+    z-index: 10;
+    inset: 0 0 auto 0;
+    display: grid;
+    grid: min-content / min(100%, $max-content-width);
+    justify-content: center;
+    background-color: $color-main;
+    box-shadow: 0 0.25rem 1rem 0 $color-shadow-black;
+
+    &__ {
+        &container {
+            width: 100%;
+            height: min-content;
+            display: flex;
+            flex-wrap: wrap;
+            gap: $spacing-lg $spacing-xxl;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &box {
+            width: 100%;
+            height: min-content;
+            display: flex;
+            flex-wrap: wrap;
+            gap: $spacing-xs $spacing-md;
+            justify-content: end;
+        }
+    }
+
+    @media (width >= $breakpoint-lg) {
+        &__ {
+            &container {
+                display: grid;
+                grid: min-content / 0.25fr 1fr 0.25fr;
+            }
+
+            &box {
+                justify-content: center;
+            }
+        }
+    }
+}

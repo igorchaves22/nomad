@@ -1,0 +1,33 @@
+@import "~styles/theme.scss";
+@import "~styles/animation.scss";
+
+.scroll-to-top-button {
+    width: max-content;
+    height: min-content;
+    padding: $spacing-xs;
+    border: $border-size-primary solid $color-brand;
+    border-radius: 100%;
+    position: fixed;
+    z-index: 5;
+    inset: auto $spacing-md $spacing-xl auto;
+    background-color: $color-main;
+    cursor: pointer;
+    transition: transform $time-primary ease-in-out;
+    animation: scaleFadeIn $time-primary ease-in;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    &__ {
+        &icon {
+            display: block;
+            color: $color-brand;
+            font-size: $icon-size;
+        }
+    }
+
+    @media (width >= $breakpoint-xxl) {
+        right: 15vw;
+    }
+}

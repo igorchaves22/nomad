@@ -1,0 +1,11 @@
+@import "~styles/theme.scss";
+
+.flex-list {
+    width: 100%;
+    height: min-content;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-md $spacing-xl;
+    justify-content: center;
+}

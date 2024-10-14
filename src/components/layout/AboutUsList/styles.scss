@@ -1,0 +1,42 @@
+@import "~styles/theme.scss";
+
+.about-us-list__item {
+    width: min(100%, 6rem);
+    height: auto;
+    padding: $spacing-tny $spacing-md;
+    border: $border-size-primary solid $color-brand;
+    border-radius: $border-radius-primary;
+    position: relative;
+    display: grid;
+    grid: repeat(2, min-content) / 100%;
+    row-gap: $spacing-tny;
+
+    &::before, &::after {
+        content: "";
+        width: 40%;
+        height: $border-size-primary;
+        position: absolute;
+        z-index: 2;
+        background-color: $color-brand;
+    }
+
+    &::before {
+        inset: -#{$spacing-sm} auto auto 0;
+    }
+
+    &::after {
+        inset: auto 0 -#{$spacing-sm} auto;
+    }
+}
+
+.about-us-list__title {
+    color: $color-brand;
+    font: $font-xxl;
+    text-align: center;
+}
+
+.about-us-list__description {
+    color: $color-primary;
+    font: $font-xs;
+    text-align: center;
+}

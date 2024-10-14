@@ -1,0 +1,31 @@
+@import "~styles/theme.scss";
+
+.cta-link {
+    width: max-content;
+    height: min-content;
+    padding: $spacing-xs $spacing-lg;
+    border: $border-size-primary solid $color-brand;
+    border-radius: $border-radius-secondary;
+    background-color: $color-brand;
+    color: $color-main;
+    font: $font-xs;
+    text-decoration: none;
+    transition: all $time-primary ease-in-out;
+
+    &:hover {
+        background-color: transparent;
+        color: $color-brand;
+    }
+
+    &-- {
+        &alternative {
+            background-color: transparent;
+            color: $color-brand;
+
+            &:hover {
+                background-color: $color-brand;
+                color: $color-main;
+            }
+        }
+    }
+}

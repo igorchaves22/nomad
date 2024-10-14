@@ -1,0 +1,55 @@
+@import "~styles/theme.scss";
+
+.key-features-list {
+    width: 100%;
+    height: min-content;
+    list-style: none;
+    display: grid;
+    grid: repeat(3, min-content) / max-content;
+    row-gap: $spacing-md;
+
+    &__ {
+        &item {
+            width: auto;
+            height: min-content;
+            padding: $spacing-sm $spacing-xl;
+            border-radius: $border-radius-secondary;
+            display: grid;
+            grid: repeat(2, min-content) / max-content / 1fr;
+            grid-template-areas:
+                "icon title"
+                "icon text";
+            gap: $spacing-tny $spacing-md;
+            justify-content: start;
+            align-items: center;
+            box-shadow: 0 0.125rem 0.25rem $color-shadow-black;
+
+            & > :nth-child(1) {
+                grid-area: icon;
+            }
+
+            & > :nth-child(2) {
+                grid-area: title;
+            }
+
+            & > :nth-child(3) {
+                grid-area: text;
+            }
+        }
+
+        &img {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+
+        &title {
+            color: $color-primary;
+            font: $font-lg;
+        }
+
+        &text {
+            color: $color-primary;
+            font: $font-xs;
+        }
+    }
+}

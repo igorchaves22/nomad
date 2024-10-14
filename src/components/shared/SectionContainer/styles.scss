@@ -1,0 +1,39 @@
+@import "~styles/theme.scss";
+
+.section-container {
+    width: 100%;
+    height: min-content;
+    padding: $spacing-xxl $spacing-md;
+    display: grid;
+    grid: repeat(2, min-content) / 100%;
+    gap: $spacing-md;
+    place-content: center;
+    place-items: center;
+
+    &-- {
+        &hero {
+            min-height: 100vh;
+            padding-top: $spacing-giga;
+        }
+    }
+
+    @media (width >= $breakpoint-md) {
+        &-- {
+            &horizontal {
+                grid: min-content / repeat(2, 1fr);
+            }
+
+            &toggle-position {
+                grid-template-areas: "last first";
+
+                & > :first-child {
+                    grid-area: first;
+                }
+    
+                & > :last-child {
+                    grid-area: last;
+                }
+            }
+        }
+    }
+}

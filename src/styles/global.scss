@@ -1,0 +1,21 @@
+@import "./theme.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+        width: $scroll-bar-size;
+        background-color: $color-main;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: $border-radius-secondary;
+        background-color: $color-brand;
+    }
+}

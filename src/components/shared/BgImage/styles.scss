@@ -1,0 +1,14 @@
+@import "~styles/theme.scss";
+
+.bg-image {
+    width: min(100%, 10rem);
+    height: min-content;
+
+    @media (width >= $breakpoint-md) {
+        width: min(100%, 20rem);
+    }
+
+    @media (width >= $breakpoint-lg) {
+        width: min(100%, 26rem);
+    }
+}

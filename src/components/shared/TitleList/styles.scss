@@ -1,0 +1,25 @@
+@import "~styles/theme.scss";
+
+.title-list {
+    width: max-content;
+    height: min-content;
+    display: grid;
+    grid: repeat(2, min-content) / 100%;
+    row-gap: $spacing-lg;
+    
+    &__ {
+        &title {
+            color: $color-brand;
+            font: $font-lg;
+        }
+
+        &list {
+            width: max-content;
+            height: min-content;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            row-gap: $spacing-sm;
+        }
+    }
+}

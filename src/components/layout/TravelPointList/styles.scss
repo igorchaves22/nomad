@@ -1,0 +1,25 @@
+@import "~styles/theme.scss";
+
+.travel-point-list__item {
+    width: min(100%, 8rem);
+    height: auto;
+    padding: $spacing-xs $spacing-md;
+    border-radius: $border-radius-primary;
+    display: grid;
+    grid: repeat(2, min-content) / 100%;
+    row-gap: $spacing-tny;
+    align-content: center;
+    box-shadow: 0 0.125rem 0.25rem $color-brand;
+}
+
+.travel-point-list__title {
+    color: $color-brand;
+    font: $font-xxl;
+    text-align: center;
+}
+
+.travel-point-list__description {
+    color: $color-primary;
+    font: $font-xs;
+    text-align: center;
+}

@@ -1,0 +1,83 @@
+@import "~styles/theme.scss";
+
+.top-destination-list {
+    width: 100%;
+    height: min-content;
+    padding-bottom: $spacing-xl;
+    overflow-x: scroll;
+    list-style: none;
+    display: grid;
+    grid: min-content / repeat(3, max-content);
+    column-gap: $spacing-xxl;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+
+    &::-webkit-scrollbar {
+        height: $border-size-secondary;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: $border-radius-secondary;
+        background-color: $color-brand;
+    }
+
+    &__ {
+        &item {
+            width: 15rem;
+            height: auto;
+            border-radius: $border-radius-primary;
+            position: relative;
+            scroll-snap-align: center;
+
+            &::after {
+                content: "";
+                width: 25%;
+                height: $border-size-primary;
+                position: absolute;
+                z-index: 2;
+                inset: calc(100% + $spacing-xs) 0 0 50%;
+                background-color: $color-brand;
+                transform: translateX(-50%);
+            }
+        }
+
+        &county {
+            width: max-content;
+            height: min-content;
+            padding: $spacing-xs $spacing-md;
+            border-radius: $border-radius-secondary;
+            position: absolute;
+            z-index: 2;
+            inset: $spacing-tny 0 auto $spacing-tny;
+            background-color: $color-brand;
+            color: $color-main;
+            font: $font-xs;
+        }
+
+        &box {
+            width: 100%;
+            height: min-content;
+            display: grid;
+            grid: repeat(2, min-content) / 100%;
+            row-gap: $spacing-sm;
+        }
+
+        &name {
+            color: $color-primary;
+            font: $font-xs;
+            text-align: center;
+        }
+
+        &img {
+            width: 100%;
+            height: min-content;
+            border-radius: $border-radius-primary;
+            box-shadow: 0 0.125rem 0.25rem $color-brand;
+        }
+    }
+
+    @media (width >= $breakpoint-md) {
+        justify-content: center;
+    }
+}

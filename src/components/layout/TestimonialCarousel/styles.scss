@@ -1,0 +1,88 @@
+@import "~styles/theme.scss";
+
+.testimonial-carousel {
+    width: min(100%, 56rem);
+    height: min-content;
+    display: grid;
+    grid: repeat(2, min-content) / repeat(2, 1fr);
+    grid-template-areas:
+        "button1 button2"
+        "testimonial testimonial";
+    gap: $spacing-md $spacing-xxl;
+    place-items: center;
+
+    & > :nth-child(1) {
+        grid-area: button1;
+    }
+
+    & > :nth-child(2) {
+        grid-area: button2;
+    }
+
+    & > :nth-child(3) {
+        grid-area: testimonial;
+    }
+
+    &__ {
+        &button {
+            width: max-content;
+            height: min-content;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+
+        &icon {
+            display: block;
+            color: $color-primary;
+            font-size: $icon-size;
+        }
+
+        &box {
+            width: 100%;
+            height: min-content;
+            padding: $spacing-xl $spacing-lg;
+            border-radius: $border-radius-primary;
+            position: relative;
+            display: grid;
+            grid: repeat(2, min-content) / 100%;
+            row-gap: $spacing-lg;
+            background-color: transparent;
+            box-shadow: 0 0.125rem 0.25rem $color-shadow-black;
+        }
+
+        &card {
+            width: 100%;
+            height: min-content;
+            display: grid;
+            grid: repeat(2, min-content) / 100%;
+            row-gap: $spacing-tny;
+            justify-items: center;
+        }
+
+        &img {
+            width: min(100%, 12rem);
+            height: min-content;
+            border: $border-size-primary solid $color-brand;
+            border-radius: 100%;
+            aspect-ratio: 1 / 1;
+        }
+
+        &text {
+            color: $color-primary;
+            font: $font-sm;
+            text-align: center;
+
+            &-- {
+                &name {
+                    font: $font-lg;
+                }
+            }
+        }
+    }
+
+    @media (width >= $breakpoint-md) {
+        grid: min-content / max-content 1fr max-content;
+        grid-template-areas: "button1 testimonial button2";
+    }
+}

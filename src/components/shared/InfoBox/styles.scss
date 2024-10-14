@@ -1,0 +1,88 @@
+@import "~styles/theme.scss";
+
+.info-box {
+    width: 100%;
+    height: min-content;
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-lg;
+    place-content: center;
+
+    &__ {
+        &panel {
+            width: 100%;
+            height: min-content;
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: $spacing-xs;
+            place-content: center;
+        }
+
+        &text {
+            width: 100%;
+            height: min-content;
+            color: $color-primary;
+            font: $font-md;
+            text-align: center;
+
+            &-- {
+                &subtitle {
+                    width: max-content;
+                    padding: $spacing-tny $spacing-md;
+                    border-radius: $border-radius-secondary;
+                    background-color: $color-primary;
+                    color: $color-brand;
+                    font: $font-sm;
+                }
+
+                &title {
+                    font: $font-huge;
+                }
+            }
+        }
+    }
+
+    &-- {
+        &size- {
+            &sm {
+                width: min(100%, 26rem);
+            }
+
+            &md {
+                width: min(100%, 34rem);
+            }
+
+            &lg {
+                width: min(100%, 44rem);
+            }
+        }
+    }
+
+    @media (width >= $breakpoint-md) {
+        row-gap: $spacing-xxl;
+
+        &__ {
+            &panel {
+                &-- {
+                    &left-layout-on-large-screen {
+                        justify-content: start;
+                    }
+                }
+            }
+
+            &text {
+                &-- {
+                    &left-layout-on-large-screen {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+
+        &-- {
+            &left-layout-on-large-screen {
+                justify-content: start;
+            }
+        }
+    }
+}

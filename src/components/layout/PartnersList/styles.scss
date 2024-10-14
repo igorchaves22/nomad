@@ -1,0 +1,11 @@
+.partner-list__item {
+    width: max-content;
+    height: min-content;
+}
+
+.partner-list__img {
+    width: 6rem;
+    height: 2rem;
+    object-fit: contain;
+    display: block;
+}
